@@ -1,0 +1,1 @@
+select c.cmname,m.MMC023,m.mmdesc, right('0000' + ltrim(convert(varchar(20),m.mttr)),4) mm, * from client c inner join  MATTER m on c.CLNT=m.CLNT where ltrim(m.MMC023) in('07000','2200') and m.MMOPDT>20200101
